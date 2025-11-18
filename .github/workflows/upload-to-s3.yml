@@ -1,0 +1,31 @@
+name: Upload Python File to S3
+
+on:
+  push:
+    branches:
+      - master     # OR main → change according to your repo
+  workflow_dispatch:
+
+
+jobs:
+  upload-to-s3:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: Upload .py files to S3
+        run: |
+          BUCKET_NAME="lava-etl-project"        # bucket name without space
+          S3_PATH="CustomerSCD1JOBS/"           # no spaces recommended
+
+          echo "Uploading .py files to s3://${BUCKET_NAME}/${S3_PATH}"
+          aws s3 cp ./ s3://$BUCKET_NAME/$S3_PATH --recursive --exclude "*" --include "*.py"
