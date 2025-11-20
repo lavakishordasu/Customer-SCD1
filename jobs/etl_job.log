@@ -1,0 +1,43 @@
+2025-11-20 15:54:45,441 [INFO] Creating Spark session...
+2025-11-20 15:55:25,305 [INFO] Spark version: 3.5.1
+2025-11-20 15:55:25,306 [INFO] Fetching secrets from AWS Secrets Manager: dev/rds/mysql
+2025-11-20 15:55:25,346 [INFO] Found credentials in shared credentials file: ~/.aws/credentials
+2025-11-20 15:55:29,181 [INFO] Secrets fetched successfully
+2025-11-20 15:55:29,187 [INFO] Loaded secret keys: ['user', 'Password', 'Host', 'Port', 'database']
+2025-11-20 15:55:29,188 [INFO] Built JDBC URL for database: retaildb
+2025-11-20 15:55:29,189 [INFO] Reading data from RDS MySQL...
+2025-11-20 15:55:29,482 [ERROR] Error reading data from RDS: The value of property spark.hadoop.fs.s3a.secret.key must not be null
+
+JVM stacktrace:
+java.lang.IllegalArgumentException: The value of property spark.hadoop.fs.s3a.secret.key must not be null
+	at org.apache.hadoop.thirdparty.com.google.common.base.Preconditions.checkArgument(Preconditions.java:219)
+	at org.apache.hadoop.conf.Configuration.set(Configuration.java:1403)
+	at org.apache.hadoop.conf.Configuration.set(Configuration.java:1384)
+	at org.apache.spark.sql.internal.SharedState.$anonfun$x$1$2(SharedState.scala:77)
+	at scala.collection.immutable.HashMap$HashMap1.foreach(HashMap.scala:400)
+	at scala.collection.immutable.HashMap$HashTrieMap.foreach(HashMap.scala:728)
+	at org.apache.spark.sql.internal.SharedState.<init>(SharedState.scala:69)
+	at org.apache.spark.sql.SparkSession.$anonfun$sharedState$1(SparkSession.scala:143)
+	at scala.Option.getOrElse(Option.scala:189)
+	at org.apache.spark.sql.SparkSession.sharedState$lzycompute(SparkSession.scala:143)
+	at org.apache.spark.sql.SparkSession.sharedState(SparkSession.scala:142)
+	at org.apache.spark.sql.SparkSession.$anonfun$sessionState$2(SparkSession.scala:162)
+	at scala.Option.getOrElse(Option.scala:189)
+	at org.apache.spark.sql.SparkSession.sessionState$lzycompute(SparkSession.scala:160)
+	at org.apache.spark.sql.SparkSession.sessionState(SparkSession.scala:157)
+	at org.apache.spark.sql.DataFrameReader.<init>(DataFrameReader.scala:699)
+	at org.apache.spark.sql.SparkSession.read(SparkSession.scala:783)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+
+2025-11-20 15:55:29,843 [INFO] Closing down clientserver connection
