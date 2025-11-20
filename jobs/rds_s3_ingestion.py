@@ -150,3 +150,4 @@ try:
 except Exception as e:
     logger.error(f"Error writing data to S3: {e}")
     raise e
+

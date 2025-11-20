@@ -41,3 +41,215 @@ java.lang.IllegalArgumentException: The value of property spark.hadoop.fs.s3a.se
 	at java.base/java.lang.Thread.run(Thread.java:842)
 
 2025-11-20 15:55:29,843 [INFO] Closing down clientserver connection
+2025-11-20 16:02:45,306 [INFO] Creating Spark session...
+2025-11-20 16:03:29,651 [INFO] Spark version: 3.5.1
+2025-11-20 16:03:29,651 [INFO] Fetching secrets from AWS Secrets Manager: dev/rds/mysql
+2025-11-20 16:03:29,689 [INFO] Found credentials in shared credentials file: ~/.aws/credentials
+2025-11-20 16:03:32,216 [INFO] Secrets fetched successfully
+2025-11-20 16:03:32,222 [INFO] Loaded secret keys: ['user', 'Password', 'Host', 'Port', 'database']
+2025-11-20 16:03:32,223 [INFO] Built JDBC URL for database: retaildb
+2025-11-20 16:03:32,223 [INFO] Reading data from RDS MySQL...
+2025-11-20 16:03:32,494 [ERROR] Error reading data from RDS: The value of property spark.hadoop.fs.s3a.secret.key must not be null
+
+JVM stacktrace:
+java.lang.IllegalArgumentException: The value of property spark.hadoop.fs.s3a.secret.key must not be null
+	at org.apache.hadoop.thirdparty.com.google.common.base.Preconditions.checkArgument(Preconditions.java:219)
+	at org.apache.hadoop.conf.Configuration.set(Configuration.java:1403)
+	at org.apache.hadoop.conf.Configuration.set(Configuration.java:1384)
+	at org.apache.spark.sql.internal.SharedState.$anonfun$x$1$2(SharedState.scala:77)
+	at scala.collection.immutable.HashMap$HashMap1.foreach(HashMap.scala:400)
+	at scala.collection.immutable.HashMap$HashTrieMap.foreach(HashMap.scala:728)
+	at org.apache.spark.sql.internal.SharedState.<init>(SharedState.scala:69)
+	at org.apache.spark.sql.SparkSession.$anonfun$sharedState$1(SparkSession.scala:143)
+	at scala.Option.getOrElse(Option.scala:189)
+	at org.apache.spark.sql.SparkSession.sharedState$lzycompute(SparkSession.scala:143)
+	at org.apache.spark.sql.SparkSession.sharedState(SparkSession.scala:142)
+	at org.apache.spark.sql.SparkSession.$anonfun$sessionState$2(SparkSession.scala:162)
+	at scala.Option.getOrElse(Option.scala:189)
+	at org.apache.spark.sql.SparkSession.sessionState$lzycompute(SparkSession.scala:160)
+	at org.apache.spark.sql.SparkSession.sessionState(SparkSession.scala:157)
+	at org.apache.spark.sql.DataFrameReader.<init>(DataFrameReader.scala:699)
+	at org.apache.spark.sql.SparkSession.read(SparkSession.scala:783)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+
+2025-11-20 16:03:32,648 [INFO] Closing down clientserver connection
+2025-11-20 16:33:11,287 [INFO] Creating Spark session...
+2025-11-20 16:33:40,192 [INFO] Spark version: 3.5.1
+2025-11-20 16:33:40,192 [INFO] Fetching secrets from AWS Secrets Manager: dev/rds/mysql
+2025-11-20 16:33:40,238 [INFO] Found credentials in shared credentials file: ~/.aws/credentials
+2025-11-20 16:33:42,981 [INFO] Secrets fetched successfully
+2025-11-20 16:33:42,984 [INFO] Loaded secret keys: ['user', 'Password', 'Host', 'Port', 'database']
+2025-11-20 16:33:42,985 [INFO] Built JDBC URL for database: retaildb
+2025-11-20 16:33:42,985 [INFO] Reading data from RDS MySQL...
+2025-11-20 16:33:43,127 [ERROR] Error reading data from RDS: The value of property spark.hadoop.fs.s3a.secret.key must not be null
+
+JVM stacktrace:
+java.lang.IllegalArgumentException: The value of property spark.hadoop.fs.s3a.secret.key must not be null
+	at org.apache.hadoop.thirdparty.com.google.common.base.Preconditions.checkArgument(Preconditions.java:219)
+	at org.apache.hadoop.conf.Configuration.set(Configuration.java:1403)
+	at org.apache.hadoop.conf.Configuration.set(Configuration.java:1384)
+	at org.apache.spark.sql.internal.SharedState.$anonfun$x$1$2(SharedState.scala:77)
+	at scala.collection.immutable.HashMap$HashMap1.foreach(HashMap.scala:400)
+	at scala.collection.immutable.HashMap$HashTrieMap.foreach(HashMap.scala:728)
+	at org.apache.spark.sql.internal.SharedState.<init>(SharedState.scala:69)
+	at org.apache.spark.sql.SparkSession.$anonfun$sharedState$1(SparkSession.scala:143)
+	at scala.Option.getOrElse(Option.scala:189)
+	at org.apache.spark.sql.SparkSession.sharedState$lzycompute(SparkSession.scala:143)
+	at org.apache.spark.sql.SparkSession.sharedState(SparkSession.scala:142)
+	at org.apache.spark.sql.SparkSession.$anonfun$sessionState$2(SparkSession.scala:162)
+	at scala.Option.getOrElse(Option.scala:189)
+	at org.apache.spark.sql.SparkSession.sessionState$lzycompute(SparkSession.scala:160)
+	at org.apache.spark.sql.SparkSession.sessionState(SparkSession.scala:157)
+	at org.apache.spark.sql.DataFrameReader.<init>(DataFrameReader.scala:699)
+	at org.apache.spark.sql.SparkSession.read(SparkSession.scala:783)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+
+2025-11-20 16:33:43,221 [INFO] Closing down clientserver connection
+2025-11-20 16:35:24,637 [INFO] Creating Spark session...
+2025-11-20 16:35:54,560 [INFO] Spark version: 3.5.1
+2025-11-20 16:35:54,561 [INFO] Fetching secrets from AWS Secrets Manager: dev/rds/mysql
+2025-11-20 16:35:54,607 [INFO] Found credentials in shared credentials file: ~/.aws/credentials
+2025-11-20 16:35:57,532 [INFO] Secrets fetched successfully
+2025-11-20 16:35:57,543 [INFO] Loaded secret keys: ['user', 'Password', 'Host', 'Port', 'database']
+2025-11-20 16:35:57,544 [INFO] Built JDBC URL for database: retaildb
+2025-11-20 16:35:57,545 [INFO] Reading data from RDS MySQL...
+2025-11-20 16:35:57,823 [ERROR] Error reading data from RDS: The value of property spark.hadoop.fs.s3a.secret.key must not be null
+
+JVM stacktrace:
+java.lang.IllegalArgumentException: The value of property spark.hadoop.fs.s3a.secret.key must not be null
+	at org.apache.hadoop.thirdparty.com.google.common.base.Preconditions.checkArgument(Preconditions.java:219)
+	at org.apache.hadoop.conf.Configuration.set(Configuration.java:1403)
+	at org.apache.hadoop.conf.Configuration.set(Configuration.java:1384)
+	at org.apache.spark.sql.internal.SharedState.$anonfun$x$1$2(SharedState.scala:77)
+	at scala.collection.immutable.HashMap$HashMap1.foreach(HashMap.scala:400)
+	at scala.collection.immutable.HashMap$HashTrieMap.foreach(HashMap.scala:728)
+	at org.apache.spark.sql.internal.SharedState.<init>(SharedState.scala:69)
+	at org.apache.spark.sql.SparkSession.$anonfun$sharedState$1(SparkSession.scala:143)
+	at scala.Option.getOrElse(Option.scala:189)
+	at org.apache.spark.sql.SparkSession.sharedState$lzycompute(SparkSession.scala:143)
+	at org.apache.spark.sql.SparkSession.sharedState(SparkSession.scala:142)
+	at org.apache.spark.sql.SparkSession.$anonfun$sessionState$2(SparkSession.scala:162)
+	at scala.Option.getOrElse(Option.scala:189)
+	at org.apache.spark.sql.SparkSession.sessionState$lzycompute(SparkSession.scala:160)
+	at org.apache.spark.sql.SparkSession.sessionState(SparkSession.scala:157)
+	at org.apache.spark.sql.DataFrameReader.<init>(DataFrameReader.scala:699)
+	at org.apache.spark.sql.SparkSession.read(SparkSession.scala:783)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+
+2025-11-20 16:35:57,878 [INFO] Closing down clientserver connection
+2025-11-20 16:39:37,488 [INFO] Creating Spark session...
+2025-11-20 16:39:54,823 [INFO] Spark version: 3.5.1
+2025-11-20 16:39:54,824 [INFO] Fetching secrets from AWS Secrets Manager: dev/rds/mysql
+2025-11-20 16:39:54,843 [INFO] Found credentials in environment variables.
+2025-11-20 16:39:56,861 [INFO] Secrets fetched successfully
+2025-11-20 16:39:56,867 [INFO] Loaded secret keys: ['user', 'Password', 'Host', 'Port', 'database']
+2025-11-20 16:39:56,868 [INFO] Built JDBC URL for database: retaildb
+2025-11-20 16:39:56,868 [INFO] Reading data from RDS MySQL...
+2025-11-20 16:40:09,305 [INFO] Loaded 33 rows from RDS
+2025-11-20 16:40:09,305 [INFO] Cleaning data: replacing empty strings and dropping nulls...
+2025-11-20 16:40:13,209 [INFO] Data cleaned. Total rows after cleaning: 11
+2025-11-20 16:40:13,209 [INFO] Writing cleaned data to S3 path: None partitioned by 'created_at'...
+2025-11-20 16:40:13,312 [ERROR] Error writing data to S3: Can not create a Path from a null string
+2025-11-20 16:40:13,332 [INFO] Closing down clientserver connection
+2025-11-20 16:40:49,172 [INFO] Creating Spark session...
+2025-11-20 16:41:23,586 [INFO] Spark version: 3.5.1
+2025-11-20 16:41:23,587 [INFO] Fetching secrets from AWS Secrets Manager: dev/rds/mysql
+2025-11-20 16:41:23,620 [INFO] Found credentials in environment variables.
+2025-11-20 16:41:25,953 [INFO] Secrets fetched successfully
+2025-11-20 16:41:25,958 [INFO] Loaded secret keys: ['user', 'Password', 'Host', 'Port', 'database']
+2025-11-20 16:41:25,959 [INFO] Built JDBC URL for database: retaildb
+2025-11-20 16:41:25,960 [INFO] Reading data from RDS MySQL...
+2025-11-20 16:41:38,722 [INFO] Loaded 33 rows from RDS
+2025-11-20 16:41:38,722 [INFO] Cleaning data: replacing empty strings and dropping nulls...
+2025-11-20 16:41:42,878 [INFO] Data cleaned. Total rows after cleaning: 11
+2025-11-20 16:41:42,878 [INFO] Writing cleaned data to S3 path: None partitioned by 'created_at'...
+2025-11-20 16:41:43,002 [ERROR] Error writing data to S3: Can not create a Path from a null string
+2025-11-20 16:41:43,030 [INFO] Closing down clientserver connection
+2025-11-20 16:48:30,641 [INFO] Creating Spark session...
+2025-11-20 16:49:00,730 [INFO] Spark version: 3.5.1
+2025-11-20 16:49:00,730 [INFO] Fetching secrets from AWS Secrets Manager: dev/rds/mysql
+2025-11-20 16:49:00,768 [INFO] Found credentials in environment variables.
+2025-11-20 16:49:03,170 [INFO] Secrets fetched successfully
+2025-11-20 16:49:03,177 [INFO] Loaded secret keys: ['user', 'Password', 'Host', 'Port', 'database']
+2025-11-20 16:49:03,178 [INFO] Built JDBC URL for database: retaildb
+2025-11-20 16:49:03,179 [INFO] Reading data from RDS MySQL...
+2025-11-20 16:49:16,149 [INFO] Loaded 33 rows from RDS
+2025-11-20 16:49:16,150 [INFO] Cleaning data: replacing empty strings and dropping nulls...
+2025-11-20 16:49:20,101 [INFO] Data cleaned. Total rows after cleaning: 11
+2025-11-20 16:49:20,102 [INFO] Writing cleaned data to S3 path: s3://lava-etl-project/CustomerSCD1JOBS/jobs/cleaned_data/ partitioned by 'created_at'...
+2025-11-20 16:49:20,188 [ERROR] Error writing data to S3: An error occurred while calling o64.parquet.
+: org.apache.hadoop.fs.UnsupportedFileSystemException: No FileSystem for scheme "s3"
+	at org.apache.hadoop.fs.FileSystem.getFileSystemClass(FileSystem.java:3443)
+	at org.apache.hadoop.fs.FileSystem.createFileSystem(FileSystem.java:3466)
+	at org.apache.hadoop.fs.FileSystem.access$300(FileSystem.java:174)
+	at org.apache.hadoop.fs.FileSystem$Cache.getInternal(FileSystem.java:3574)
+	at org.apache.hadoop.fs.FileSystem$Cache.get(FileSystem.java:3521)
+	at org.apache.hadoop.fs.FileSystem.get(FileSystem.java:540)
+	at org.apache.hadoop.fs.Path.getFileSystem(Path.java:365)
+	at org.apache.spark.sql.execution.datasources.DataSource.planForWritingFileFormat(DataSource.scala:454)
+	at org.apache.spark.sql.execution.datasources.DataSource.planForWriting(DataSource.scala:530)
+	at org.apache.spark.sql.DataFrameWriter.saveToV1Source(DataFrameWriter.scala:388)
+	at org.apache.spark.sql.DataFrameWriter.saveInternal(DataFrameWriter.scala:361)
+	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:240)
+	at org.apache.spark.sql.DataFrameWriter.parquet(DataFrameWriter.scala:792)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+
+2025-11-20 16:49:20,418 [INFO] Closing down clientserver connection
+2025-11-20 16:50:23,325 [INFO] Creating Spark session...
+2025-11-20 16:50:45,897 [INFO] Spark version: 3.5.1
+2025-11-20 16:50:45,897 [INFO] Fetching secrets from AWS Secrets Manager: dev/rds/mysql
+2025-11-20 16:50:45,914 [INFO] Found credentials in environment variables.
+2025-11-20 16:50:48,023 [INFO] Secrets fetched successfully
+2025-11-20 16:50:48,031 [INFO] Loaded secret keys: ['user', 'Password', 'Host', 'Port', 'database']
+2025-11-20 16:50:48,031 [INFO] Built JDBC URL for database: retaildb
+2025-11-20 16:50:48,031 [INFO] Reading data from RDS MySQL...
+2025-11-20 16:50:59,251 [INFO] Loaded 33 rows from RDS
+2025-11-20 16:50:59,252 [INFO] Cleaning data: replacing empty strings and dropping nulls...
+2025-11-20 16:51:03,123 [INFO] Data cleaned. Total rows after cleaning: 11
+2025-11-20 16:51:03,124 [INFO] Writing cleaned data to S3 path: s3a://lava-etl-project/CustomerSCD1JOBS/jobs/cleaned_data/ partitioned by 'created_at'...
+2025-11-20 16:51:41,836 [INFO] Data written successfully to s3a://lava-etl-project/CustomerSCD1JOBS/jobs/cleaned_data/
+2025-11-20 16:51:41,901 [INFO] Closing down clientserver connection
