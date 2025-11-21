@@ -145,7 +145,8 @@ logger.info(f"Data cleaned. Total rows after cleaning: {df_cleaned.count()}")
 logger.info(f"Writing cleaned data to S3 path: {OUTPUT_PATH} partitioned by 'created_at'...")
 
 try:
-    df_cleaned.write.mode("overwrite").partitionBy("created_at").parquet(OUTPUT_PATH)
+    df_cleaned.write.mode("overwrite").parquet(OUTPUT_PATH)
+
     logger.info(f"Data written successfully to {OUTPUT_PATH}")
 except Exception as e:
     logger.error(f"Error writing data to S3: {e}")

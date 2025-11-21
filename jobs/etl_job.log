@@ -253,3 +253,45 @@ java.lang.IllegalArgumentException: The value of property spark.hadoop.fs.s3a.se
 2025-11-20 16:51:03,124 [INFO] Writing cleaned data to S3 path: s3a://lava-etl-project/CustomerSCD1JOBS/jobs/cleaned_data/ partitioned by 'created_at'...
 2025-11-20 16:51:41,836 [INFO] Data written successfully to s3a://lava-etl-project/CustomerSCD1JOBS/jobs/cleaned_data/
 2025-11-20 16:51:41,901 [INFO] Closing down clientserver connection
+2025-11-21 12:13:52,169 [INFO] Creating Spark session...
+2025-11-21 12:14:18,304 [INFO] Spark version: 3.5.1
+2025-11-21 12:14:18,304 [INFO] Fetching secrets from AWS Secrets Manager: dev/rds/mysql
+2025-11-21 12:14:18,341 [INFO] Found credentials in environment variables.
+2025-11-21 12:14:21,031 [INFO] Secrets fetched successfully
+2025-11-21 12:14:21,035 [INFO] Loaded secret keys: ['user', 'Password', 'Host', 'Port', 'database']
+2025-11-21 12:14:21,035 [INFO] Built JDBC URL for database: retaildb
+2025-11-21 12:14:21,035 [INFO] Reading data from RDS MySQL...
+2025-11-21 12:14:33,138 [INFO] Loaded 33 rows from RDS
+2025-11-21 12:14:33,139 [INFO] Cleaning data: replacing empty strings and dropping nulls...
+2025-11-21 12:14:36,180 [INFO] Data cleaned. Total rows after cleaning: 11
+2025-11-21 12:14:36,180 [INFO] Writing cleaned data to S3 path: s3a://lava-etl-project/CustomerSCD1JOBS/jobs/cleaned_data/ partitioned by 'created_at'...
+2025-11-21 12:15:06,589 [INFO] Data written successfully to s3a://lava-etl-project/CustomerSCD1JOBS/jobs/cleaned_data/
+2025-11-21 12:15:06,637 [INFO] Closing down clientserver connection
+2025-11-21 14:08:15,408 [INFO] Creating Spark session...
+2025-11-21 14:08:41,364 [INFO] Spark version: 3.5.1
+2025-11-21 14:08:41,364 [INFO] Fetching secrets from AWS Secrets Manager: dev/rds/mysql
+2025-11-21 14:08:41,397 [INFO] Found credentials in environment variables.
+2025-11-21 14:08:43,576 [INFO] Secrets fetched successfully
+2025-11-21 14:08:43,581 [INFO] Loaded secret keys: ['user', 'Password', 'Host', 'Port', 'database']
+2025-11-21 14:08:43,582 [INFO] Built JDBC URL for database: retaildb
+2025-11-21 14:08:43,582 [INFO] Reading data from RDS MySQL...
+2025-11-21 14:08:57,531 [INFO] Loaded 34 rows from RDS
+2025-11-21 14:08:57,532 [INFO] Cleaning data: replacing empty strings and dropping nulls...
+2025-11-21 14:09:01,436 [INFO] Data cleaned. Total rows after cleaning: 12
+2025-11-21 14:09:01,436 [INFO] Writing cleaned data to S3 path: s3a://lava-etl-project/CustomerSCD1JOBS/jobs/cleaned_data/ partitioned by 'created_at'...
+2025-11-21 14:09:38,652 [INFO] Data written successfully to s3a://lava-etl-project/CustomerSCD1JOBS/jobs/cleaned_data/
+2025-11-21 14:09:38,712 [INFO] Closing down clientserver connection
+2025-11-21 14:17:26,039 [INFO] Creating Spark session...
+2025-11-21 14:17:45,380 [INFO] Spark version: 3.5.1
+2025-11-21 14:17:45,380 [INFO] Fetching secrets from AWS Secrets Manager: dev/rds/mysql
+2025-11-21 14:17:45,417 [INFO] Found credentials in environment variables.
+2025-11-21 14:17:47,387 [INFO] Secrets fetched successfully
+2025-11-21 14:17:47,393 [INFO] Loaded secret keys: ['user', 'Password', 'Host', 'Port', 'database']
+2025-11-21 14:17:47,393 [INFO] Built JDBC URL for database: retaildb
+2025-11-21 14:17:47,394 [INFO] Reading data from RDS MySQL...
+2025-11-21 14:17:58,484 [INFO] Loaded 34 rows from RDS
+2025-11-21 14:17:58,485 [INFO] Cleaning data: replacing empty strings and dropping nulls...
+2025-11-21 14:18:01,734 [INFO] Data cleaned. Total rows after cleaning: 12
+2025-11-21 14:18:01,735 [INFO] Writing cleaned data to S3 path: s3a://lava-etl-project/CustomerSCD1JOBS/jobs/cleaned_data/ partitioned by 'created_at'...
+2025-11-21 14:18:32,704 [INFO] Data written successfully to s3a://lava-etl-project/CustomerSCD1JOBS/jobs/cleaned_data/
+2025-11-21 14:18:32,818 [INFO] Closing down clientserver connection
